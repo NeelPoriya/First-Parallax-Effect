@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Parallax Effect</title>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <img src="sun.png" id="sun">
+    <img src="mountain.png" id="mountain">
+    <h2 id="text">Quiet Valley</h2>
+    <img src="river.png" id="river">
+    <img src="trees.png" id="trees">
+    <a href="#sec" id="btn">Explore</a>
+  </section>
+
+  <div class="sec" id = "sec">
+    <h2>Parallax Scrolling Effect</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae laborum perferendis quos labore nihil aliquid velit placeat omnis odio nemo inventore ex vel sapiente tempora praesentium iusto, iure voluptatibus vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius et voluptate temporibus itaque aspernatur accusantium voluptates iste commodi velit excepturi veniam quibusdam ratione sequi dignissimos recusandae, illum tenetur autem laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et repellendus saepe magnam qui. Esse nostrum exercitationem quos amet sed aliquid, at illo delectus quod omnis est ea. Aut, id! <br><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae laborum perferendis quos labore nihil aliquid velit placeat omnis odio nemo inventore ex vel sapiente tempora praesentium iusto, iure voluptatibus vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius et voluptate temporibus itaque aspernatur accusantium voluptates iste commodi velit excepturi veniam quibusdam ratione sequi dignissimos recusandae, illum tenetur autem laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et repellendus saepe magnam qui. Esse nostrum exercitationem quos amet sed aliquid, at illo delectus quod omnis est ea. Aut, id! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae laborum perferendis quos labore nihil aliquid velit placeat omnis odio nemo inventore ex vel sapiente tempora praesentium iusto, iure voluptatibus vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br> Eius et voluptate temporibus itaque aspernatur accusantium voluptates iste commodi velit excepturi veniam quibusdam ratione sequi dignissimos recusandae, illum tenetur autem laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et repellendus saepe magnam qui. Esse nostrum exercitationem quos amet sed aliquid, at illo delectus quod omnis est ea. Aut, id! 
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae laborum perferendis quos labore nihil aliquid velit placeat omnis odio nemo inventore ex vel sapiente tempora praesentium iusto, iure voluptatibus vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius et voluptate temporibus itaque aspernatur accusantium voluptates iste commodi velit excepturi veniam quibusdam ratione sequi dignissimos recusandae, illum tenetur autem laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et repellendus saepe magnam qui. Esse nostrum exercitationem quos amet sed aliquid, at illo delectus quod omnis est ea. Aut, id! <br><br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae laborum perferendis quos labore nihil aliquid velit placeat omnis odio nemo inventore ex vel sapiente tempora praesentium iusto, iure voluptatibus vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius et voluptate temporibus itaque aspernatur accusantium voluptates iste commodi velit excepturi veniam quibusdam ratione sequi dignissimos recusandae, illum tenetur autem laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et repellendus saepe magnam qui. Esse nostrum exercitationem quos amet sed aliquid, at illo delectus quod omnis est ea. Aut, id!.</p>
+  </div>
+</body>
+
+<script>
+  let sum = document.getElementById('sun');
+  let mountain = document.getElementById('mountain');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let trees = document.getElementById('trees');
+  let river = document.getElementById('river');
+
+  window.addEventListener('scroll', ()=>{
+    let value = window.scrollY;
+
+    btn.style.top = -value+'px';
+    sum.style.top = value*0.2+'px';
+    mountain.style.top = value*0.2   + 'px';
+    trees.style.top = value*0.2 + 'px';
+    river.style.top = value*0.2+'px';
+  });
+</script>
+
+</html>
